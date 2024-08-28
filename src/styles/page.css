@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Zeyada&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.cutive-mono-regular {
+    font-family: 'Cutive Mono', monospace;
+    font-weight: 400;
+}
+  
+.zeyada-regular {
+    font-family: "Zeyada", cursive;
+    font-weight: 400;
+    font-style: normal;
+}

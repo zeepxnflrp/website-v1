@@ -1,5 +1,11 @@
+"use client";
+
 import { NextPage } from 'next';
 import Head from 'next/head';
+import Typewriter from 'typewriter-effect';
+import "../styles/page.css";
+
+const words = ["I code.", "I write.", "I play games...", "...sometimes"];
 
 const Home: NextPage = () => {
   return (
@@ -10,13 +16,21 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
-        <h1>
-          Hi! Baani here.
-        </h1>
-        <p>
-          I code.
+      <main className="flex flex-col items-start justify-start h-screen p-12 sm:p-20 md:p-24 lg:p-28 xl:p-34">
+        <p className="text-2xl mb-4 cutive-mono-regular">Hi!</p>
+        <p className="text-6xl mt-4 zeyada-regular">
+          Baani <span className="text-xl font-normal cutive-mono-regular">here.</span>
         </p>
+        <h2 className="text-2xl mt-6 cutive-mono-regular">
+          <Typewriter
+            options={{
+              strings: words,
+              autoStart: true,
+              loop: true,
+            }}
+          />
+        </h2>
+        {/* <p className="mt-6 code">Here's some of my work.</p> */}
       </main>
     </div>
   );
